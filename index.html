@@ -4,76 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizzas Saborosas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            color: #333;
-        }
-        p {
-            margin: 10px 0;
-        }
-        .preco {
-            color: violet;
-        }
-        .entrega {
-            color: green;
-        }
-        .destaque {
-            color: rgb(221, 10, 52);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Seja bem-vindo ao site de pizzas!</h1>
-    <hr>
-    <h2>Aqui estão os pedidos mais populares!</h2>
-    <p><b>Pizza Quatro Queijos:</b> A pizza com 3 camadas de queijo, a melhor do estado!</p>
-    <p><b>Pizza Calabresa:</b> A pizza com a melhor calabresa da América do Sul (calabresa de búfalo).</p>
-    <p><i>Pizza Moda da Casa:</i> A melhor do momento (vem com carne de cabrito).</p>
-    <p><i>Pizza Strogonoff de Carne:</i> A melhor pizza do mundo (vem com carne de jacaré).</p>
-    
-    <h3><b>Temos sabores de pizzas doces também!</b></h3>
-    <p class="destaque">
-        Pizza de Paçoca (a melhor paçoca da cidade) <br>
-        Pizza de Brigadeiro (o melhor brigadeiro do estado) <br>
-        Pizza de Romeu e Julieta <br>
-        Pizza de Prestígio
-    </p>
-    <hr>
+    <div class="container">
+        <h1>Seja bem-vindo ao site de pizzas!</h1>
+        <hr>
+        <h2>Aqui estão os pedidos mais populares!</h2>
+        <p><strong>Pizza Quatro Queijos:</strong> A pizza com 3 camadas de queijo, a melhor do estado!</p>
+        <p><strong>Pizza Calabresa:</strong> A pizza com a melhor calabresa da América do Sul (calabresa de búfalo).</p>
+        <p><i>Pizza Moda da Casa:</i> A melhor do momento (vem com carne de cabrito).</p>
+        <p><i>Pizza Strogonoff de Carne:</i> A melhor pizza do mundo (vem com carne de jacaré).</p>
+        
+        <h3><strong>Temos sabores de pizzas doces também!</strong></h3>
+        <p class="destaque">
+            Pizza de Paçoca (a melhor paçoca da cidade) <br>
+            Pizza de Brigadeiro (o melhor brigadeiro do estado) <br>
+            Pizza de Romeu e Julieta <br>
+            Pizza de Prestígio
+        </p>
+        <hr>
 
-    <h4>Veja os valores de cada pizza:</h4>
-    <dl class="preco">
-        <dt>Pizza de 4 pedaços:</dt> <dd>R$28,00</dd>
-        <dt>Pizza de 6 pedaços:</dt> <dd>R$37,00</dd>
-        <dt>Pizza de 8 pedaços:</dt> <dd>R$45,00</dd>
-        <dt>Pizza de 12 pedaços:</dt> <dd>R$55,00</dd>
-    </dl>
+        <h4>Veja os valores de cada pizza:</h4>
+        <dl class="preco">
+            <dt>Pizza de 4 pedaços:</dt> <dd>R$28,00</dd>
+            <dt>Pizza de 6 pedaços:</dt> <dd>R$37,00</dd>
+            <dt>Pizza de 8 pedaços:</dt> <dd>R$45,00</dd>
+            <dt>Pizza de 12 pedaços:</dt> <dd>R$55,00</dd>
+        </dl>
 
-    <p class="entrega"><b>O valor da taxa de entrega depende da região que você mora!</b></p>
+        <p class="entrega"><strong>O valor da taxa de entrega depende da região que você mora!</strong></p>
 
-    <strong>
-        <h5>Atendemos somente delivery</h5>
-        Nossa pizzaria fica na Rua do Bicudo, N:2896, Jardim Sol Nascente.
-    </strong>
-    <br>
+        <h5><strong>Atendemos somente delivery</strong></h5>
+        <p>Nossa pizzaria fica na Rua do Bicudo, N:2896, Jardim Sol Nascente.</p>
+        <p class="destaque"><strong>Se você vier pegar seu pedido na nossa pizzaria, verá o endereço acima.</strong></p>
 
-    <p class="destaque"><b>Se você vier pegar seu pedido na nossa pizzaria, verá o endereço acima.</b></p>
+        <h6><em>Nossas formas de pagamento são:</em></h6>
+        <ul>
+            <li>Aceitamos cartões de crédito e débito.</li>
+            <li>Aceitamos Pix.</li>
+            <li>Aceitamos dinheiro em espécie.</li>
+        </ul>
+        <hr>
 
-    <h6>
-        <em>Nossas formas de pagamento são:</em> <br>
-        Aceitamos cartões de crédito e débito. <br>
-        Aceitamos Pix. <br>
-        Aceitamos dinheiro em espécie.
-    </h6>
-    <hr>
-
-    <dt><em>Faça seu pedido aqui:</em></dt>
-    <dl>
-        <dt><img src="sua-imagem-aqui.jpg" alt="Pizza deliciosa" /></dt>
-    </dl>
+        <dt><em>Faça seu pedido aqui:</em></dt>
+        <img src="sua-imagem-aqui.jpg" alt="Pizza deliciosa" />
+    </div>
 </body>
 </html>
