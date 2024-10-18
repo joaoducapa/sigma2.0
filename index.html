@@ -6,6 +6,7 @@
     <title>Pizzas Saborosas</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Estilos para o menu e o layout */
         .menu {
             max-width: 600px;
             margin: 20px auto;
@@ -15,7 +16,7 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         .pizza-item {
-            cursor: pointer; /* Adicionado para indicar que é clicável */
+            cursor: pointer;
             border-bottom: 1px solid #ddd;
             padding: 10px 0;
         }
@@ -41,8 +42,7 @@
         <p>As melhores pizzas da cidade, entregues na sua casa.</p>
     </header>
 
-    <!-- Menu de Pizzas -->
-    <div class="menu">
+    <nav class="menu">
         <h2>Menu de Pizzas</h2>
         <div class="pizza-item" onclick="showPizzaDetails('Margherita')">
             <span class="pizza-name">Margherita</span>
@@ -60,7 +60,7 @@
             <span class="pizza-name">Vegetariana</span>
             <span class="pizza-price">R$ 28,00</span>
         </div>
-    </div>
+    </nav>
 
     <main>
         <section>
