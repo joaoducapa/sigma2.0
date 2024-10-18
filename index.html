@@ -5,28 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizzas Saborosas</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .botao-pedido {
-            display: inline-block;
-            padding: 15px 25px;
-            font-size: 16px;
-            color: white;
-            background-color: #d9534f; /* Cor do botão */
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .botao-pedido:hover {
-            background-color: #c9302c; /* Cor ao passar o mouse */
-        }
-        .comentario {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 10px 0;
-            background-color: #f9f9f9;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -100,8 +78,7 @@
 
         <section>
             <h2>Contato</h2>
-            <p>Para fazer seu pedido, ligue para (44) 99759-1110 ou envie uma mensagem pelo nosso WhatsApp!</p>
-            <p>WhatsApp: <a href="https://wa.me/5544997591110">+55 44 99759-1110</a></p>
+            <p>Para fazer seu pedido, ligue para (44) 99759-1110 ou envie uma mensagem pelo nosso WhatsApp! (44) 99759-1110</p>
             <img src="sua-imagem-aqui.jpg" alt="Pizza deliciosa" />
         </section>
 
@@ -127,52 +104,29 @@
         <section>
             <h2>Faça seu Pedido</h2>
             <p>Pronto para saborear nossas pizzas? Clique no botão abaixo para fazer seu pedido!</p>
-            <a href="https://wa.me/5544997591110" class="botao-pedido">Fazer Pedido</a>
+            <a href="https://wa.me/5511999999999" class="botao-pedido">Fazer Pedido</a>
+        </section>
+
+        <section>
+            <h2>Deixe Seu Feedback</h2>
+            <p>Adoramos ouvir a opinião dos nossos clientes! Por favor, preencha o formulário abaixo para compartilhar sua experiência.</p>
+            <form action="enviar_feedback.php" method="post">
+                <label for="nome">Seu Nome:</label><br>
+                <input type="text" id="nome" name="nome" required><br><br>
+                
+                <label for="email">Seu Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="feedback">Seu Feedback:</label><br>
+                <textarea id="feedback" name="feedback" rows="4" required></textarea><br><br>
+                
+                <input type="submit" value="Enviar">
+            </form>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Pizzaria Saborosa. Todos os direitos reservados.</p>
     </footer>
-    <section>
-        <h2>Promoções Especiais</h2>
-        <ul>
-            <li><strong>Pizza do Mês:</strong> Pizza de Frango com Catupiry - R$ 35,00</li>
-            <li><strong>Combo Família:</strong> 2 Pizzas Grandes + 1 Refrigerante - R$ 90,00</li>
-            <li><strong>Desconto de 10%:</strong> Para pedidos acima de R$ 100,00!</li>
-            <li><strong>Terça da Calabresa:</strong> Todas as pizzas de calabresa com 20% de desconto!</li>
-        </ul>
-    </section>
-    <section>
-        <h2>A História da Pizzaria Saborosa</h2>
-        <p>
-            Fundada em 2020, a Pizzaria Saborosa nasceu da paixão por criar pizzas de alta qualidade com ingredientes frescos e selecionados. 
-            Nossa missão é proporcionar uma experiência gastronômica única, unindo tradição e inovação em cada fatia.
-        </p>
-        <p>
-            Inspirados pelas receitas de família e pela rica cultura italiana, trabalhamos diariamente para aperfeiçoar nossos sabores. 
-            Cada pizza é feita com amor, utilizando massa artesanal e ingredientes frescos, que vão do tradicional ao inovador.
-        </p>
-        <p>
-            Ao longo dos anos, conquistamos a confiança e o carinho dos nossos clientes, tornando-nos uma referência na cidade. 
-            Agradecemos a todos que fazem parte da nossa história e esperamos continuar a deliciar você com nossas pizzas por muitos anos!
-        </p>
-    </section>
-    <section>
-        <h2>Deixe Seu Feedback</h2>
-        <p>Adoramos ouvir a opinião dos nossos clientes! Por favor, preencha o formulário abaixo para compartilhar sua experiência.</p>
-        <form action="enviar_feedback.php" method="post">
-            <label for="nome">Seu Nome:</label><br>
-            <input type="text" id="nome" name="nome" required><br><br>
-            
-            <label for="email">Seu Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-            
-            <label for="feedback">Seu Feedback:</label><br>
-            <textarea id="feedback" name="feedback" rows="4" required></textarea><br><br>
-            
-            <input type="submit" value="Enviar">
-        </form>
-    </section>
 </body>
 </html>
