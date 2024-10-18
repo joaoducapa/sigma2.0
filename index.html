@@ -6,16 +6,12 @@
     <title>Pizzas Saborosas</title>
     <link rel="stylesheet" href="styles.css">
     <script>
-        function showPizzaDetails(pizzaName) {
-            alert("Você selecionou: " + pizzaName);
-        }
-
         function calculateTotal() {
-            const pizzas = document.querySelectorAll('.pizza-item');
+            const items = document.querySelectorAll('.item');
             let total = 0;
-            pizzas.forEach(pizza => {
-                const price = parseFloat(pizza.dataset.price);
-                if (pizza.querySelector('input').checked) {
+            items.forEach(item => {
+                const price = parseFloat(item.dataset.price);
+                if (item.querySelector('input').checked) {
                     total += price;
                 }
             });
@@ -31,27 +27,67 @@
 
     <nav class="menu">
         <h2>Menu de Pizzas</h2>
-        <div class="pizza-item" data-price="32.00">
+        <div class="item pizza-item" data-price="32.00">
             <label>
                 <input type="checkbox"> Pizza Portuguesa - R$ 32,00
             </label>
         </div>
-        <div class="pizza-item" data-price="35.00">
+        <div class="item pizza-item" data-price="35.00">
             <label>
                 <input type="checkbox"> Pizza de Frango com Catupiry - R$ 35,00
             </label>
         </div>
-        <div class="pizza-item" data-price="30.00">
+        <div class="item pizza-item" data-price="30.00">
             <label>
                 <input type="checkbox"> Pizza de Calabresa - R$ 30,00
             </label>
         </div>
-        <div class="pizza-item" data-price="38.00">
+        <div class="item pizza-item" data-price="38.00">
             <label>
                 <input type="checkbox"> Pizza de Bacon - R$ 38,00
             </label>
         </div>
+        <div class="item pizza-item" data-price="40.00">
+            <label>
+                <input type="checkbox"> Pizza de Marguerita - R$ 40,00
+            </label>
+        </div>
+        <div class="item pizza-item" data-price="42.00">
+            <label>
+                <input type="checkbox"> Pizza de Vegetariana - R$ 42,00
+            </label>
+        </div>
+        <div class="item pizza-item" data-price="36.00">
+            <label>
+                <input type="checkbox"> Pizza de Atum - R$ 36,00
+            </label>
+        </div>
+        <div class="item pizza-item" data-price="37.00">
+            <label>
+                <input type="checkbox"> Pizza de Frango Teriyaki - R$ 37,00
+            </label>
+        </div>
         <button onclick="calculateTotal()">Calcular Total</button>
+    </nav>
+
+    <nav class="bebidas">
+        <h2>Menu de Refrigerantes</h2>
+        <div class="item bebida-item" data-price="5.00">
+            <label>
+                <input type="checkbox"> Refrigerante Lata - R$ 5,00
+            </label>
+        </div>
+        <div class="item bebida-item" data-price="7.00">
+            <label>
+                <input type="checkbox"> Refrigerante 2L - R$ 7,00
+            </label>
+        </div>
+        <div class="item bebida-item" data-price="6.00">
+            <label>
+                <input type="checkbox"> Água Mineral - R$ 6,00
+            </label>
+        </div>
+        <button onclick="calculateTotal()">Calcular Total de Bebidas</button>
     </nav>
 
     <main>
@@ -127,7 +163,7 @@
             <h3>Formas de Pagamento:</h3>
             <ul>
                 <li>Cartões de crédito e débito</li>
-                <li>Pix</li>
+                <li>Pix - Pagamento rápido e fácil!</li>
                 <li>Dinheiro em espécie</li>
             </ul>
         </section>
