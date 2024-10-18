@@ -158,5 +158,21 @@
             Agradecemos a todos que fazem parte da nossa história e esperamos continuar a deliciar você com nossas pizzas por muitos anos!
         </p>
     </section>
+    <section>
+        <h2>Deixe Seu Feedback</h2>
+        <p>Adoramos ouvir a opinião dos nossos clientes! Por favor, preencha o formulário abaixo para compartilhar sua experiência.</p>
+        <form action="enviar_feedback.php" method="post">
+            <label for="nome">Seu Nome:</label><br>
+            <input type="text" id="nome" name="nome" required><br><br>
+            
+            <label for="email">Seu Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="feedback">Seu Feedback:</label><br>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea><br><br>
+            
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
 </body>
 </html>
