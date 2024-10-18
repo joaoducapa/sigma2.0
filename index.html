@@ -6,7 +6,6 @@
     <title>Pizzas Saborosas</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Adicionei estilos para o menu */
         .menu {
             max-width: 600px;
             margin: 20px auto;
@@ -16,6 +15,7 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         .pizza-item {
+            cursor: pointer; /* Adicionado para indicar que é clicável */
             border-bottom: 1px solid #ddd;
             padding: 10px 0;
         }
@@ -29,6 +29,11 @@
             color: #a00;
         }
     </style>
+    <script>
+        function showPizzaDetails(pizzaName) {
+            alert("Você selecionou: " + pizzaName);
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -39,19 +44,19 @@
     <!-- Menu de Pizzas -->
     <div class="menu">
         <h2>Menu de Pizzas</h2>
-        <div class="pizza-item">
+        <div class="pizza-item" onclick="showPizzaDetails('Margherita')">
             <span class="pizza-name">Margherita</span>
             <span class="pizza-price">R$ 25,00</span>
         </div>
-        <div class="pizza-item">
+        <div class="pizza-item" onclick="showPizzaDetails('Pepperoni')">
             <span class="pizza-name">Pepperoni</span>
             <span class="pizza-price">R$ 30,00</span>
         </div>
-        <div class="pizza-item">
+        <div class="pizza-item" onclick="showPizzaDetails('Quatro Queijos')">
             <span class="pizza-name">Quatro Queijos</span>
             <span class="pizza-price">R$ 35,00</span>
         </div>
-        <div class="pizza-item">
+        <div class="pizza-item" onclick="showPizzaDetails('Vegetariana')">
             <span class="pizza-name">Vegetariana</span>
             <span class="pizza-price">R$ 28,00</span>
         </div>
@@ -172,3 +177,4 @@
     </footer>
 </body>
 </html>
+
