@@ -7,14 +7,22 @@
     <link rel="stylesheet" href="styles.css">
     <script>
         function calculateTotal() {
-            const items = document.querySelectorAll('.item');
+            const pizzaItems = document.querySelectorAll('.pizza-item');
+            const drinkItems = document.querySelectorAll('.bebida-item');
             let total = 0;
-            items.forEach(item => {
-                const price = parseFloat(item.dataset.price);
+
+            pizzaItems.forEach(item => {
                 if (item.querySelector('input').checked) {
-                    total += price;
+                    total += parseFloat(item.dataset.price);
                 }
             });
+
+            drinkItems.forEach(item => {
+                if (item.querySelector('input').checked) {
+                    total += parseFloat(item.dataset.price);
+                }
+            });
+
             alert("Total do pedido: R$ " + total.toFixed(2));
         }
     </script>
@@ -23,126 +31,75 @@
     <header>
         <h1>Bem-vindo à Pizzaria Saborosa!</h1>
         <p>As melhores pizzas da cidade, entregues na sua casa.</p>
+        <nav>
+            <a href="#pizzas">Pizzas</a>
+            <a href="#bebidas">Bebidas</a>
+            <a href="#promocoes">Promoções</a>
+            <a href="#contato">Contato</a>
+        </nav>
     </header>
 
-    <nav class="menu">
-        <h2>Menu de Pizzas</h2>
-        <div class="item pizza-item" data-price="32.00">
-            <label>
-                <input type="checkbox"> Pizza Portuguesa - R$ 32,00
-            </label>
-        </div>
-        <div class="item pizza-item" data-price="35.00">
-            <label>
-                <input type="checkbox"> Pizza de Frango com Catupiry - R$ 35,00
-            </label>
-        </div>
-        <div class="item pizza-item" data-price="30.00">
-            <label>
-                <input type="checkbox"> Pizza de Calabresa - R$ 30,00
-            </label>
-        </div>
-        <div class="item pizza-item" data-price="38.00">
-            <label>
-                <input type="checkbox"> Pizza de Bacon - R$ 38,00
-            </label>
-        </div>
-        <div class="item pizza-item" data-price="40.00">
-            <label>
-                <input type="checkbox"> Pizza de Marguerita - R$ 40,00
-            </label>
-        </div>
-        <div class="item pizza-item" data-price="42.00">
-            <label>
-                <input type="checkbox"> Pizza de Vegetariana - R$ 42,00
-            </label>
-        </div>
-        <div class="item pizza-item" data-price="36.00">
-            <label>
-                <input type="checkbox"> Pizza de Atum - R$ 36,00
-            </label>
-        </div>
-        <div class="item pizza-item" data-price="37.00">
-            <label>
-                <input type="checkbox"> Pizza de Frango Teriyaki - R$ 37,00
-            </label>
-        </div>
-        <button onclick="calculateTotal()">Calcular Total</button>
-    </nav>
-
-    <nav class="bebidas">
-        <h2>Menu de Refrigerantes</h2>
-        <div class="item bebida-item" data-price="5.00">
-            <label>
-                <input type="checkbox"> Refrigerante Lata - R$ 5,00
-            </label>
-        </div>
-        <div class="item bebida-item" data-price="7.00">
-            <label>
-                <input type="checkbox"> Refrigerante 2L - R$ 7,00
-            </label>
-        </div>
-        <div class="item bebida-item" data-price="6.00">
-            <label>
-                <input type="checkbox"> Água Mineral - R$ 6,00
-            </label>
-        </div>
-        <button onclick="calculateTotal()">Calcular Total de Bebidas</button>
-    </nav>
-
     <main>
-        <section>
-            <h2>Nossas Pizzas Populares</h2>
-            <ul>
-                <li><strong>Pizza Quatro Queijos</strong> - A melhor combinação de queijos!</li>
-                <li><strong>Pizza Calabresa</strong> - Sabor intenso com cebola.</li>
-                <li><strong>Pizza Moda da Casa</strong> - Uma receita exclusiva.</li>
-                <li><strong>Pizza Strogonoff de Carne</strong> - Uma mistura deliciosa de sabores.</li>
-            </ul>
+        <section id="pizzas">
+            <h2>Menu de Pizzas</h2>
+            <div class="menu">
+                <div class="item pizza-item" data-price="32.00">
+                    <label>
+                        <input type="checkbox"> Pizza Portuguesa - R$ 32,00
+                    </label>
+                </div>
+                <div class="item pizza-item" data-price="35.00">
+                    <label>
+                        <input type="checkbox"> Pizza de Frango com Catupiry - R$ 35,00
+                    </label>
+                </div>
+                <div class="item pizza-item" data-price="30.00">
+                    <label>
+                        <input type="checkbox"> Pizza de Calabresa - R$ 30,00
+                    </label>
+                </div>
+                <div class="item pizza-item" data-price="38.00">
+                    <label>
+                        <input type="checkbox"> Pizza de Bacon - R$ 38,00
+                    </label>
+                </div>
+                <div class="item pizza-item" data-price="40.00">
+                    <label>
+                        <input type="checkbox"> Pizza de Marguerita - R$ 40,00
+                    </label>
+                </div>
+                <div class="item pizza-item" data-price="42.00">
+                    <label>
+                        <input type="checkbox"> Pizza Vegetariana - R$ 42,00
+                    </label>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Pizzas Doces</h2>
-            <ul>
-                <li>Pizza de Paçoca</li>
-                <li>Pizza de Brigadeiro</li>
-                <li>Pizza de Romeu e Julieta</li>
-                <li>Pizza de Prestígio</li>
-            </ul>
+        <section id="bebidas">
+            <h2>Menu de Refrigerantes</h2>
+            <div class="menu">
+                <div class="item bebida-item" data-price="5.00">
+                    <label>
+                        <input type="checkbox"> Refrigerante Lata - R$ 5,00
+                    </label>
+                </div>
+                <div class="item bebida-item" data-price="7.00">
+                    <label>
+                        <input type="checkbox"> Refrigerante 2L - R$ 7,00
+                    </label>
+                </div>
+                <div class="item bebida-item" data-price="6.00">
+                    <label>
+                        <input type="checkbox"> Água Mineral - R$ 6,00
+                    </label>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Preços das Pizzas</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Tipo de Pizza</th>
-                        <th>Preço</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Pizza de 4 pedaços</td>
-                        <td>R$28,00</td>
-                    </tr>
-                    <tr>
-                        <td>Pizza de 6 pedaços</td>
-                        <td>R$37,00</td>
-                    </tr>
-                    <tr>
-                        <td>Pizza de 8 pedaços</td>
-                        <td>R$45,00</td>
-                    </tr>
-                    <tr>
-                        <td>Pizza de 12 pedaços</td>
-                        <td>R$55,00</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p><strong>Taxa de entrega varia de acordo com a região.</strong></p>
-        </section>
+        <button class="calcular-btn" onclick="calculateTotal()">Calcular Total</button>
 
-        <section>
+        <section id="promocoes">
             <h2>Promoções Especiais</h2>
             <ul>
                 <li>Desconto de 10% na primeira compra!</li>
@@ -151,27 +108,18 @@
             </ul>
         </section>
 
-        <section>
-            <h2>História da Pizzaria</h2>
-            <p>Fundada em 2020, a Pizzaria Saborosa começou como um sonho de oferecer as melhores pizzas da região. Desde então, temos trabalhado para trazer ingredientes frescos e receitas autênticas para nossos clientes.</p>
-        </section>
-
-        <section>
-            <h2>Informações da Pizzaria</h2>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Para fazer seu pedido, ligue para (44) 99759-1110 ou envie uma mensagem pelo nosso WhatsApp!</p>
             <p>Localização: Rua do Bicudo, N:2896, Jardim Sol Nascente.</p>
-            <p><strong>Atendemos somente delivery.</strong></p>
             <h3>Formas de Pagamento:</h3>
             <ul>
                 <li>Cartões de crédito e débito</li>
                 <li>Pix - Pagamento rápido e fácil!</li>
                 <li>Dinheiro em espécie</li>
             </ul>
-        </section>
-
-        <section>
-            <h2>Contato</h2>
-            <p>Para fazer seu pedido, ligue para (44) 99759-1110 ou envie uma mensagem pelo nosso WhatsApp! (44) 99759-1110</p>
-            <img src="sua-imagem-aqui.jpg" alt="Pizza deliciosa" />
+            <p>Para saber mais, clique no botão abaixo!</p>
+            <a href="https://wa.me/5544997591110" class="botao-pedido">Fazer Pedido</a>
         </section>
 
         <section>
@@ -182,21 +130,6 @@
             <div class="comentario">
                 <p><strong>José Pereira:</strong> "Adorei a entrega rápida e a qualidade da pizza. Recomendo a Calabresa!"</p>
             </div>
-            <div class="comentario">
-                <p><strong>Maria Santos:</strong> "A Pizza Moda da Casa é uma experiência única. Voltarei com certeza!"</p>
-            </div>
-            <div class="comentario">
-                <p><strong>Lucas Oliveira:</strong> "Sempre peço as pizzas doces. A de Brigadeiro é a minha favorita!"</p>
-            </div>
-            <div class="comentario">
-                <p><strong>Fernanda Costa:</strong> "Serviço excelente e pizzas saborosas. Não tem como errar!"</p>
-            </div>
-        </section>
-
-        <section>
-            <h2>Faça seu Pedido</h2>
-            <p>Pronto para saborear nossas pizzas? Clique no botão abaixo para fazer seu pedido!</p>
-            <a href="https://wa.me/5544997591110" class="botao-pedido">Fazer Pedido</a>
         </section>
     </main>
 
