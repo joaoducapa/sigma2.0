@@ -17,6 +17,30 @@
             });
             alert("Total do pedido: R$ " + total.toFixed(2));
         }
+
+        function toggleFAQ() {
+            const faqList = document.getElementById('faqList');
+            const faqButton = document.getElementById('faqButton');
+            if (faqList.style.display === "none") {
+                faqList.style.display = "block";
+                faqButton.textContent = "Esconder Perguntas Frequentes";
+            } else {
+                faqList.style.display = "none";
+                faqButton.textContent = "Mostrar Perguntas Frequentes";
+            }
+        }
+
+        function toggleComentarios() {
+            const comentariosList = document.getElementById('comentariosList');
+            const comentariosButton = document.getElementById('comentariosButton');
+            if (comentariosList.style.display === "none") {
+                comentariosList.style.display = "block";
+                comentariosButton.textContent = "Esconder Comentários";
+            } else {
+                comentariosList.style.display = "none";
+                comentariosButton.textContent = "Mostrar Comentários";
+            }
+        }
     </script>
 </head>
 <body>
@@ -163,14 +187,17 @@
 
         <section>
             <h2>FAQ (Perguntas Frequentes)</h2>
-            <dl>
-                <dt>Qual o prazo de entrega?</dt>
-                <dd>O prazo de entrega varia de 30 a 60 minutos, dependendo da sua localização.</dd>
-                <dt>Vocês fazem entregas para toda a cidade?</dt>
-                <dd>Sim, atendemos diversas regiões. Consulte-nos para mais detalhes.</dd>
-                <dt>É possível fazer pedidos personalizados?</dt>
-                <dd>Sim! Entre em contato e informe suas preferências.</dd>
-            </dl>
+            <button id="faqButton" onclick="toggleFAQ()">Mostrar Perguntas Frequentes</button>
+            <div id="faqList" style="display: none;">
+                <dl>
+                    <dt>Qual o prazo de entrega?</dt>
+                    <dd>O prazo de entrega varia de 30 a 60 minutos, dependendo da sua localização.</dd>
+                    <dt>Vocês fazem entregas para toda a cidade?</dt>
+                    <dd>Sim, atendemos diversas regiões. Consulte-nos para mais detalhes.</dd>
+                    <dt>É possível fazer pedidos personalizados?</dt>
+                    <dd>Sim! Entre em contato e informe suas preferências.</dd>
+                </dl>
+            </div>
         </section>
 
         <section>
@@ -198,14 +225,17 @@
 
         <section>
             <h2>Comentários de Clientes</h2>
-            <div class="comentario">
-                <p><strong>Ana Silva:</strong> "As melhores pizzas que já comi! A Quatro Queijos é simplesmente divina!"</p>
-            </div>
-            <div class="comentario">
-                <p><strong>José Pereira:</strong> "Adorei a entrega rápida e a qualidade da pizza. Recomendo a Calabresa!"</p>
-            </div>
-            <div class="comentario">
-                <p><strong>Fernanda Costa:</strong> "Serviço excelente e pizzas saborosas. Não tem como errar!"</p>
+            <button id="comentariosButton" onclick="toggleComentarios()">Mostrar Comentários</button>
+            <div id="comentariosList" style="display: none;">
+                <div class="comentario">
+                    <p><strong>Ana Silva:</strong> "As melhores pizzas que já comi! A Quatro Queijos é simplesmente divina!"</p>
+                </div>
+                <div class="comentario">
+                    <p><strong>José Pereira:</strong> "Adorei a entrega rápida e a qualidade da pizza. Recomendo a Calabresa!"</p>
+                </div>
+                <div class="comentario">
+                    <p><strong>Fernanda Costa:</strong> "Serviço excelente e pizzas saborosas. Não tem como errar!"</p>
+                </div>
             </div>
         </section>
     </main>
